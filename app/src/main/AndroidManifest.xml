@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.directlineex.brsingh.directlineandroidexample">
+
+    <!-- To run a bot you need Internet permissSions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <receiver
+        android:name=".Alarm"
+        android:process=":remote" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo2"
+        android:label="Dr.멍"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".LoadingActivity"
+            android:label="Dr.멍"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+
+        <activity android:name=".ChatActivity" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="botPrimaryToken"
+            android:value="8iOlKM0Suw0.cwA.c9Y.QOjnnLXJ1-JTTfsZkWHlXXsBz0Tbag5_RA60ewsi1tg" />
+        <meta-data
+            android:name="botName"
+            android:value="DoctorMeong625" />
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".MyPageActivity" />
+        <activity android:name=".ProfileSettingActivity" />
+        <activity android:name=".RecordActivity"></activity>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".MemberJoinActivity"/>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+</manifest>

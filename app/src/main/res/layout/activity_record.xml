@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileSettingActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 위에 메뉴-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/mainContainer"
+            android:background="#F8CACD"
+            android:layout_width="match_parent"
+            android:layout_height="42dp">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4">
+                <TextView
+                    android:id="@+id/menu_text"
+                    android:textSize="16dp"
+                    android:text="상담내역"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/menu"
+                    android:id="@+id/menu"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--밑에 내용-->
+        <LinearLayout
+            android:background="#EFEFEF"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 상담 내역이 없을 때 보일 화면 -->
+            <LinearLayout
+                android:id="@+id/noData"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_margin="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_margin="10dp"
+                    android:src="@drawable/hoho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:gravity="center"
+                    android:text="진행중인 상담이 없습니다"
+                    android:textColor="#C7C7C7"
+                    android:layout_margin="3dp"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_margin="3dp"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:text="닥터멍을 만나보세요"
+                    android:textColor="#B1C1DF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 상담 내역일 있을 때 보일 화면 -->
+            <LinearLayout
+                android:id="@+id/yesData"
+                android:orientation="vertical"
+                android:background="#ffffff"
+                android:layout_margin="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 기록 리스트-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ListView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </ListView>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "832973192321",
+    "firebase_url": "https://drmeong-c7d35.firebaseio.com",
+    "project_id": "drmeong-c7d35",
+    "storage_bucket": "drmeong-c7d35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832973192321:android:220c598480d813a3",
+        "android_client_info": {
+          "package_name": "com.directlineex.brsingh.directlineandroidexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "832973192321-9kua0lofrj0p8b4oj1r6qc2gjkta81ur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.directlineex.brsingh.directlineandroidexample",
+            "certificate_hash": "97cb998afcd3169fe0ede644499419fa1b818b86"
+          }
+        },
+        {
+          "client_id": "832973192321-rfdsiiuess3ph9bjs3a0lm06f577n8j9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcthd8DSgTQRpQ4-uqHGKD3L4m0nGeFUg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "832973192321-rfdsiiuess3ph9bjs3a0lm06f577n8j9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

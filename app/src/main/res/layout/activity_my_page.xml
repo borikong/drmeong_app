@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".MyPageActivity">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 위에 메뉴-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/mainContainer"
+        android:background="#F8CACD"
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+            <TextView
+                android:id="@+id/menu_text"
+                android:textSize="16dp"
+                android:text="마이 프로필"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/menu"
+                android:id="@+id/menu"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 프로필 부분-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/user1"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+            <TextView
+                android:layout_marginTop="4dp"
+                android:id="@+id/mainuserid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <TabHost
+        android:id="@+id/tabhost1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8DA4D0"
+                android:layout_weight="0"
+                android:layout_marginBottom="-4dp"/>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eaeaea"
+                android:padding="16dp"
+                android:layout_weight="1">
+
+
+                <!-- 내 정보 탭-->
+                <LinearLayout
+                    android:padding="16dp"
+                    android:id="@+id/tab1"
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TableRow
+                                android:padding="3dp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18dp"
+                                    android:textColor="#000000"
+                                    android:text="아이디"
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="5"
+                                    android:textColor="#787878"
+                                    android:textSize="18dp"
+                                    android:id="@+id/userid"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:padding="3dp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18dp"
+                                    android:textColor="#000000"
+                                    android:text="이름" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="5"
+                                    android:textColor="#787878"
+                                    android:textSize="18dp"
+                                    android:id="@+id/username"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:padding="3dp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18dp"
+                                    android:textColor="#000000"
+                                    android:text="나이" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="5"
+                                    android:textColor="#787878"
+                                    android:textSize="18dp"
+                                    android:id="@+id/userage"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:padding="3dp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18dp"
+                                    android:textColor="#000000"
+                                    android:text="성별" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="5"
+                                    android:textColor="#787878"
+                                    android:textSize="18dp"
+                                    android:id="@+id/usergender"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:padding="3dp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18dp"
+                                    android:textColor="#000000"
+                                    android:text="이메일"
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="5"
+                                    android:textColor="#787878"
+                                    android:textSize="18dp"
+                                    android:id="@+id/useremail"/>
+                            </TableRow>
+                        </TableLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/editProfileBtn"
+                            android:background="#e6deef"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="프로필 수정"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- 강아지 정보 -->
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+                    android:padding="16dp">
+
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TableRow
+                                android:layout_margin="6dp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18dp"
+                                    android:textColor="#000000"
+                                    android:text="강아지 이름"
+                                    />
+                                <TextView
+                                    android:gravity="center_vertical"
+                                    android:layout_width="0dp"
+
+                                    android:layout_weight="5"
+                                    android:textColor="#787878"
+                                    android:textSize="18dp"
+                                    android:text="마끌리"/>
+                            </TableRow>
+                            <TableRow
+                                android:layout_margin="6dp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18dp"
+                                    android:textColor="#000000"
+                                    android:text="강아지 생일"
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="5"
+                                    android:textColor="#787878"
+                                    android:textSize="18dp"
+                                    android:text="8월 3일"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_margin="6dp"
+                                >
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18dp"
+                                    android:textColor="#000000"
+                                    android:text="견종"
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="5"
+                                    android:textColor="#787878"
+                                    android:textSize="18dp"
+                                    android:text="푸들"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_margin="6dp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="성별"
+                                    android:textColor="#000000"
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:id="@+id/female_dog"
+                                    android:text="여"
+                                    android:textColor="#787878"
+                                    android:textSize="18dp"
+                                    android:checked="true"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="5" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_margin="6dp"
+                                >
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:textSize="18dp"
+                                    android:textColor="#000000"
+                                    android:text="몸무게"
+                                    />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="5"
+                                    android:textColor="#787878"
+                                    android:textSize="18dp"
+                                    android:text="15kg"/>
+                            </TableRow>
+                        </TableLayout>
+
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <Button
+                            android:id="@+id/editProfileBtn_dog"
+                            android:layout_gravity="left"
+                            android:background="#e6deef"
+                            android:textColor="#000000"
+                            android:text="수정하기"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
+
+
+
+
+    <!-- 슬라이딩 페이지 -->
+    <SlidingDrawer
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:allowSingleTap="true"
+        android:animateOnClick="true"
+        android:bottomOffset="0dp"
+        android:content="@+id/content"
+        android:handle="@+id/handle"
+        android:orientation="horizontal"
+        android:topOffset="150dp">
+
+        <Button
+            android:id="@id/handle"
+            android:visibility="invisible"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#00111111"
+            />
+
+
+        <LinearLayout
+
+            android:id="@id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:background="@drawable/drawer_img"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/profile_circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileid"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/gochatBtn"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginLeft="6dp"
+                        android:src="@drawable/menu_icon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:textSize="16dp"
+                        android:textColor="#000000"
+                        android:text="상담하기"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/recordBtn"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginLeft="6dp"
+                        android:src="@drawable/menu_icon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:textSize="16dp"
+                        android:textColor="#000000"
+                        android:text="상담내역"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/myPageBtn"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginLeft="6dp"
+                        android:src="@drawable/menu_icon3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:textSize="16dp"
+                        android:textColor="#000000"
+                        android:text="마이 페이지"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/settingBtn"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginLeft="6dp"
+                        android:src="@drawable/menu_icon4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:textSize="16dp"
+                        android:textColor="#000000"
+                        android:text="설정"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="28dp"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/logoutbtn" />
+
+                        <Button
+                            android:id="@+id/logBtn"
+                            android:textSize="16dp"
+                            android:layout_width="240dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="#00ffffff" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </SlidingDrawer>
+
+
+</FrameLayout>
