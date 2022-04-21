@@ -17,7 +17,8 @@
 
 ## App(Android)
 
-![image](https://user-images.githubusercontent.com/32058390/161828007-ab511d2f-217d-4eb1-b333-bfdbd39466f3.png)![image](https://user
+![image](https://user-images.githubusercontent.com/32058390/164482856-90801033-5de6-4562-8792-56319b762214.png)
+
 
 1. 채팅 시작하기
 
